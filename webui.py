@@ -65,7 +65,7 @@ def api_only_worker():
         root_path=f"/{cmd_opts.subpath}" if cmd_opts.subpath else ""
     )
 
-
+set COMMANDLINE_ARGS = --lowvram --precision full --no-half --skip-torch-cuda-test
 def webui_worker():
     from modules.shared_cmd_options import cmd_opts
 
@@ -193,3 +193,4 @@ if __name__ == "__main__":
         webui()
 
     main_thread.loop()
+
